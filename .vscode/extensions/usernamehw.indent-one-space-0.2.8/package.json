@@ -1,0 +1,112 @@
+{
+	"name": "indent-one-space",
+	"displayName": "Indent one space",
+	"description": "Move code to left or right with a distance of one whitespace",
+	"version": "0.2.8",
+	"publisher": "usernamehw",
+	"license": "MIT",
+	"icon": "img/icon.png",
+	"qna": false,
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/usernamehw/vscode-indent-one-space"
+	},
+	"bugs": {
+		"url": "https://github.com/usernamehw/vscode-indent-one-space/issues"
+	},
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"indent",
+		"indentation",
+		"one",
+		"whitespace",
+		"left",
+		"right"
+	],
+	"activationEvents": [
+		"onCommand:extension.indentOneSpace",
+		"onCommand:extension.reverseIndentOneSpace"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Indent one space",
+			"properties": {
+				"indentOneSpace.workOnSingleLine": {
+					"type": "boolean",
+					"default": true,
+					"description": "Command will execute even when only 1 line is selected."
+				},
+				"indentOneSpace.cramReversed": {
+					"type": "boolean",
+					"default": true,
+					"description": "Outdent lines even if one of them reached column 0 (gutter)."
+				},
+				"indentOneSpace.onlyCompleteRange": {
+					"type": "boolean",
+					"default": false,
+					"description": "Indent only when range is on either side has only whitespace characters and further - line boundaries."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.indentOneSpace",
+				"title": "Indent one space"
+			},
+			{
+				"command": "extension.reverseIndentOneSpace",
+				"title": "Reverse indent one space"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.indentOneSpace",
+				"key": "space",
+				"when": "editorTextFocus && !editorReadOnly && editorHasSelection"
+			},
+			{
+				"command": "extension.reverseIndentOneSpace",
+				"key": "shift+space",
+				"when": "editorTextFocus && !editorReadOnly && editorHasSelection"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production --color",
+		"watch": "webpack --mode development --watch --stats minimal"
+	},
+	"devDependencies": {
+		"@soda/friendly-errors-webpack-plugin": "^1.8.0",
+		"@types/node": "^14.17.9",
+		"@types/vscode": "^1.56.0",
+		"@typescript-eslint/eslint-plugin": "^4.29.1",
+		"@typescript-eslint/parser": "^4.29.1",
+		"eslint": "^7.32.0",
+		"eslint-plugin-no-autofix": "^1.1.2",
+		"ts-loader": "^9.2.5",
+		"typescript": "^4.3.5",
+		"webpack": "^5.50.0",
+		"webpack-cli": "^4.7.2"
+	},
+	"__metadata": {
+		"id": "21a0ca11-beff-4be7-a773-d094b6a2ed93",
+		"publisherId": "151820df-5dc5-4c97-8751-eb84643203fa",
+		"publisherDisplayName": "Alexander",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1649529280437
+	}
+}

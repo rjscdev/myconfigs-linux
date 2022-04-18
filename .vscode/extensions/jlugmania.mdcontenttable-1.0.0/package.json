@@ -1,0 +1,74 @@
+{
+	"name": "mdcontenttable",
+	"displayName": "Md Content Table Generator",
+	"description": "Simple content table generator.",
+	"version": "1.0.0",
+	"author": {
+		"name": "Javier Lugmania",
+		"email": "jlugmania@gmail.com"
+	},
+	"publisher": "jlugmania",
+	"license": "GPLv3",
+	"homepage": "https://github.com/rlugmania/md-table-of-contents-generator",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rlugmania/md-table-of-contents-generator"
+	},
+	"bugs": {
+		"url": "https://github.com/rlugmania/md-table-of-contents-generator/issues"
+	},
+	"icon": "images/logo.png",
+	"keywords": [
+		"markdown",
+		"content"
+	],
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:mdcontenttable.contentTable"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "mdcontenttable.contentTable",
+				"title": "Generate Table of Contents"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	},
+	"__metadata": {
+		"id": "079cbb33-15ec-4df9-aca9-5e7b78267b75",
+		"publisherId": "bee602ea-919a-43fd-a315-e77b7aa298d3",
+		"publisherDisplayName": "Javier Lugmania",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1649695592234
+	}
+}
