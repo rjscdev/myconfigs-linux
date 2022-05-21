@@ -1,0 +1,15 @@
+# Dependabot updates
+# Docs: https://docs.github.com/es/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: "@types/vscode"
+    assignees:
+      - LuqueDaniel
+    commit-message:
+      prefix: deps

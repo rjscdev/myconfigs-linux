@@ -17,7 +17,7 @@ ZSH_THEME="xiong-chiamiov-plus"
 # ZSH_THEME_RANDOM_CANDIDATES=( "xiong-chiamiov-plus" "xiong-chiamiov-plus" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -41,7 +41,7 @@ ZSH_THEME="xiong-chiamiov-plus"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -72,12 +72,14 @@ ZSH_THEME="xiong-chiamiov-plus"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/configs/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 plugins=( 
     # other plugins...
     zsh-autosuggestions
 )
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

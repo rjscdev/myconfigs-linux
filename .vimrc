@@ -21,26 +21,23 @@ so ~/configs/.vim/plugins.vim
 so ~/configs/.vim/plugins-config.vim
 so ~/configs/.vim/maps.vim
 
+set laststatus=2
+
+if !has('gui_running')
+      set t_Co=256
+endif
 "themes
 set termguicolors
 let g:tokyonight_style = 'night'
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_cursor = 'auto'
+let g:tkyonight_current_word = 'bold'
+let g:LightLine = {'colorscheme': 'tokyonight'}
+
 
 colorscheme tokyonight
 
 "lightline
-set laststatus=2
-
-if !has('gui_running')
-  set t_Co=256
-endif
-
-let g:lightline = {
-      \ 'colorscheme': 'one'(background=dark),
-      \ }
-      
-let g:lightline = {}
-
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
       \  'linter_infos': 'lightline#ale#infos',
